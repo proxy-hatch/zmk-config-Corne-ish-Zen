@@ -16,6 +16,12 @@
 #define ADJUST 4
 #define CONFIG 5
 
+/*
+Mac -- Win
+OPTION -- ALT
+
+*/
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -23,12 +29,12 @@
                 default_layer {
                         label = "QWERTY";
 
+// GUI: WIN on Windows, CMD on MacOS
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
+// |  TAB  |   Q   |   W   |   E   |   R   |   T   |       |   Y   |   U   |   I   |   O   |   P   |  BKSP |
+// |  ALT  |   A   |   S   |   D   |   F   |   G   |       |   H   |   J   |   K   |   L   |   '   |  ENT  |
+// |  SHFT |   Z   |   X   |   C   |   V   |   B   |       |   N   |   M   |   ,   |   .   |   /   |  RSFT |
+//                         |  GUI  |  CTL  | NUMROW|       | SPACE | ADJUST|  F13  |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U &kp I    &kp O   &kp P    &kp BKSP
    &kp LALT  &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K    &kp L   &kp QUOT &kp ENTER
@@ -41,11 +47,10 @@
                         label = "GAMING";
 
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
+// |  TAB  |   Q   |   W   |   E   |   R   |   T   |       |   Y   |   U   |   I   |   O   |   P   |  BKSP |
+// |  ALT  |   A   |   S   |   D   |   F   |   G   |       |   H   |   J   |   K   |   L   |   '   |  ENT  |
+// |  SHFT |   Z   |   X   |   C   |   V   |   B   |       |   N   |   M   |   ,   |   .   |   /   |  RSFT |
+//                         |  CTL  | NUMROW| SPACE |       | SPACE | ADJUST|  F13  |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U &kp I    &kp O   &kp P    &kp BKSP
    &kp LALT  &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K    &kp L   &kp QUOT &kp ENTER
@@ -58,11 +63,10 @@
                         label = "NUMPAD";
 
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
+// |  TAB  |       |       |       |       |       |       |   =   |   7   |   8   |   9   |   -   |  BKSP |
+// | NUMLCK|       |       |       |       |       |       |   *   |   4   |   5   |   6   |   +   |       |
+// | NUMPAD|       |       |       |       |       |       |   /   |   1   |   2   |   3   |  ENT  |       |
+//                         | CONFIG|  CTL  | NUMROW|       | SPACE |   0   |   .   |
                         bindings = < 
    &kp TAB     &none &none &none &none &none    &kp KP_EQUAL    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &kp BSPC
    &kp KP_NLCK &none &none &none &none &none    &kp KP_ASTERISK &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &none
@@ -75,11 +79,10 @@
                         label = "NUMROW";
 
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
+// |  ESC  |   1   |   2   |   3   |   4   |   5   |       |   6   |   7   |   8   |   9   |   0   |  DEL  |
+// | GRAVE |   A   |   S   | PSCRN |   -   |   =   |       |   ←   |   ↓   |   ↑   |   →   |   ;   |       |
+// |       |       |       |   \   |   [   |   ]   |       |       |       |       |       |       |       |
+//                         | CONFIG|  CTL  | NUMROW|       | SPACE | ADJUST|  F13  |
                         bindings = <
    &kp ESC   &kp N1 &kp N2 &kp N3    &kp N4    &kp N5       &kp N6   &kp N7   &kp N8 &kp N9    &kp N0   &kp DEL
    &kp GRAVE &none  &none  &kp PSCRN &kp MINUS &kp EQUAL    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI &none
@@ -92,11 +95,10 @@
                         label = "ADJUST";
 
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
+// | RESET |   1   |   2   |   3   |   4   |   5   |       |   6   |   7   |   8   |   9   |   0   |  DEL  |
+// | BT_CLR|  BT0  |  BT1  |  BT2  |  BT3  |  BT4  |       |       |       |       |       |       |       |
+// |       |       |       |       |       |       |       |       |       |       |       |       |       |
+//                         |  GUI  |  CTL  | NUMROW|       | SPACE | ADJUST| GAMING|
                         bindings = <
    &kp F1      &kp F2  &kp F3   &kp F4    &kp F5 &kp F6    &kp F7   &kp F8   &kp F9 &kp F10   &kp F11 &kp F12
    &kp CAPS    &kp INS &kp HOME &kp PG_UP &none  &none     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none   &none
@@ -108,12 +110,14 @@
                 config_layer {
                         label = "CONFIG";
 
+// RESET: reset keyboard firmware
+// BT_CLR: clear the currently selected bluetooth profile
+// BT0-4: select bluetooth device 0-4
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
+// | RESET |   1   |   2   |   3   |   4   |   5   |       |   6   |   7   |   8   |   9   |   0   |  DEL  |
+// | BT_CLR|  BT0  |  BT1  |  BT2  |  BT3  |  BT4  |       |       |       |       |       |       |       |
+// |       |       |       |       |       |       |       |       |       |       |       |       |       |
+//                         | CONFIG|  CTL  | NUMROW|       | SPACE | ADJUST|  F13  |
                         bindings = <
    &reset     &none        &none        &none        &none        &none           &none &none &none &none &none &none 
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none &none &none &none &none &none
