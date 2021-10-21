@@ -3,13 +3,13 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define QWERTY 0
-#define GAMING 1
-#define NUMPAD 2
-#define NUMROW 3
-#define ADJUST 4
-#define CONFIG 5
+#define NUMBER 1
+#define FUNC 2
+#define CONFIG 3
 
 /*
+TODO: MAC/WIN layer
+
 ##  Mac         -- Win key conversions
     CTRL        -- CTRL
     OPTION      -- WIN(GUI)
@@ -46,98 +46,64 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
 // GUI: WIN on Windows, CMD on MacOS
 // -----------------------------------------------------------------------------------------
 // |  `~  |   Q   |   W   |   E   |   R   |   T   |       |   Y   |   U   |   I   |   O   |   P   |   =+  |
-// |  TAB |   A   |   S   |   D   |   F   |   G   |       |   H   |   J   |   K   |   L   |   ;:  |   '"  |
+// |  \|  |   A   |   S   |   D   |   F   |   G   |       |   H   |   J   |   K   |   L   |   ;:  |   '"  |
 // | CAPS |   Z   |   X   |   C   |   V   |   B   |       |   N   |   M   |   ,<  |   .>  |   /?  |   -_  |
-//                        |  ESC  |  SPC  |   \|  |       | ENTER |  BSPC |  DEL  |
+//                        |  ESC  |  SPC  |  TAB  |       | ENTER |  BSPC |  DEL  |
                         bindings = <
-   &kp GRAVE    &kp Q       &kp W       &kp E           &kp R           &kp T    &kp Y          &kp U       &kp I       &kp O   &kp P           &kp EQUAL
-   &kp TAB      &hm LCTRL A &hm LALT S  &hm LGUI D      &hm LSHFT F     &kp G    &hm RSHFT H    &hm RGUI J  &hm RALT K  &kp L   &hm RCTRL SEMI  &kp SINGLE_QUOTE
-   &kp CAPS     &kp Z       &kp X       &kp C           &kp V           &kp B    &kp N          &kp M       &kp COMMA   &kp DOT &kp SLASH       &kp MINUS
-                  &kp ESC &kp SPC &mo BACKSLASH    &kp ENTER &mo BSPC &kp DEL
+   &kp GRAVE    &kp Q       &kp W       &kp E           &kp R           &kp T           &kp Y               &kp U               &kp I       &kp O       &kp P           &kp EQUAL
+   &kp BSLH     &hm LCTRL A &hm LALT S  &hm LGUI D      &hm LSHFT F     &kp G           &kp H               &hm RSHFT J         &hm RGUI K  &hm RALT L  &hm RCTRL SEMI  &kp SINGLE_QUOTE
+   &kp CAPS     &kp Z       &kp X       &kp C           &kp V           &kp B           &kp N               &kp M               &kp COMMA   &kp DOT     &kp SLASH       &kp MINUS
+                                        &lt ESC FUNC    &lt SPC NUMBER  &lt TAB CONFIG  &lt ENTER CONFIG    &lt BSPC NUMBER     &lt DEL FUNC
                         >;
                 };
 
-                gaming_layer {
-                        label = "GAMING";
+                number_layer {
+                    label = "NUMBER";
 
 // -----------------------------------------------------------------------------------------
-// |  TAB  |   Q   |   W   |   E   |   R   |   T   |       |   Y   |   U   |   I   |   O   |   P   |  BKSP |
-// |  ALT  |   A   |   S   |   D   |   F   |   G   |       |   H   |   J   |   K   |   L   |   '   |  ENT  |
-// |  SHFT |   Z   |   X   |   C   |   V   |   B   |       |   N   |   M   |   ,   |   .   |   /   |  RSFT |
-//                         |  CTL  | NUMROW| SPACE |       | SPACE | ADJUST|  F13  |
+// |   {   |   }   |   7&  |   8*  |   9(  |   /   |       |       |  UNDO |   ↑   |  REDO |       |       |
+// |   [{  |   ]}  |   4$  |   5%  |   6^  |   *   |       |       |   ←   |   ↓   |   →   |       |       |
+// |   (   |   )   |   1!  |   2@  |   3#  |   -   |       |       |  CUT  | COPY  | PASTE |       |       |
+//                         |   .   |   0)  |   +   |       | ENTER |  BSPC |  DEL  |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U &kp I    &kp O   &kp P    &kp BKSP
-   &kp LALT  &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K    &kp L   &kp QUOT &kp ENTER
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M &kp CMMA &kp DOT &kp FSLH &kp RSFT
-               &kp LCTL &mo NUMROW &kp SPC    &kp SPC &mo ADJUST &kp F13
+   &kp LBRC     &kp RBRC        &kp N7          &kp N8              &kp N9          &kp KP_SLASH        &none               &mt LGUI Z          &kp UP          &kp KP_N9       &none  &none
+   &kp LBKT     &hm LCTRL RBKT  &hm LALT N4     &hm LGUI N5         &hm LSHFT N6    &kp KP_MULTIPLY     &none               &hm RSHFT LEFT      &hm RGUI DOWN   &hm RALT RIGHT  &none  &none
+   &kp LPAR     &kp RPAR        &kp N1          &kp N2              &kp N3          &kp KP_MINUS        &none               &mt LGUI X          &mt LGUI C      &mt LGUI V      &none  &none
+                                                &lt KP_DOT FUNC     &lt N0 NUMBER   &lt KP_PLUS CONFIG  &lt ENTER CONFIG    &lt BSPC NUMBER     &lt DEL FUNC
                         >;
                 };
 
-                numpad_layer {
-                        label = "NUMPAD";
+                function_layer {
+                    label = "FUNC";
 
 // -----------------------------------------------------------------------------------------
-// |  TAB  |       |       |       |       |       |       |   =   |   7   |   8   |   9   |   -   |  BKSP |
-// | NUMLCK|       |       |       |       |       |       |   *   |   4   |   5   |   6   |   +   |       |
-// | NUMPAD|       |       |       |       |       |       |   /   |   1   |   2   |   3   |  ENT  |       |
-//                         | CONFIG|  CTL  | NUMROW|       | SPACE |   0   |   .   |
-                        bindings = < 
-   &kp TAB     &none &none &none &none &none    &kp KP_EQUAL    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &kp BSPC
-   &kp KP_NLCK &none &none &none &none &none    &kp KP_ASTERISK &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &none
-   &tog NUMPAD &none &none &none &none &none    &kp KP_SLASH    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_ENTER &none
-              &mo CONFIG &kp LCTL &mo NUMROW    &kp SPC &kp KP_N0 &kp KP_DOT
-                        >;
-                };
-
-                numrow_layer {
-                        label = "NUMROW";
-
-// -----------------------------------------------------------------------------------------
-// |  ESC  |   1   |   2   |   3   |   4   |   5   |       |   6   |   7   |   8   |   9   |   0   |  DEL  |
-// | GRAVE |   A   |   S   | PSCRN |   -   |   =   |       |   ←   |   ↓   |   ↑   |   →   |   ;   |       |
-// |       |       |       |   \   |   [   |   ]   |       |       |       |       |       |       |       |
-//                         | CONFIG|  CTL  | NUMROW|       | SPACE | ADJUST|  F13  |
+// |       |  F12  |   F7  |   F8  |   F9  | PrtSc |       |       |       |  PGUP |       |       |       |
+// |       |  F11  |   F4  |   F5  |   F6  | ScrLk |       |       |  HOME |  PGDN |  END  |       |       |
+// |       |       |   F1  |   F2  |   F3  | PauBrk|       |  INS  |  CUT  |  COPY | PASTE |       |       |
+//                         |  ESC  |   F10 |  TAB  |       | ENTER |  BSPC |  DEL  |
                         bindings = <
-   &kp ESC   &kp N1 &kp N2 &kp N3    &kp N4    &kp N5       &kp N6   &kp N7   &kp N8 &kp N9    &kp N0   &kp DEL
-   &kp GRAVE &none  &none  &kp PSCRN &kp MINUS &kp EQUAL    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI &none
-   &none     &none  &none  &kp BSLH  &kp LBKT  &kp RBKT     &none    &none    &none  &none     &none    &none 
-                          &mo CONFIG &kp LCTL &mo NUMROW    &kp SPC &mo ADJUST &kp F13
-                        >;
-                };
-
-                adjust_layer {
-                        label = "ADJUST";
-
-// -----------------------------------------------------------------------------------------
-// | RESET |   1   |   2   |   3   |   4   |   5   |       |   6   |   7   |   8   |   9   |   0   |  DEL  |
-// | BT_CLR|  BT0  |  BT1  |  BT2  |  BT3  |  BT4  |       |       |       |       |       |       |       |
-// |       |       |       |       |       |       |       |       |       |       |       |       |       |
-//                         |  GUI  |  CTL  | NUMROW|       | SPACE | ADJUST| GAMING|
-                        bindings = <
-   &kp F1      &kp F2  &kp F3   &kp F4    &kp F5 &kp F6    &kp F7   &kp F8   &kp F9 &kp F10   &kp F11 &kp F12
-   &kp CAPS    &kp INS &kp HOME &kp PG_UP &none  &none     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none   &none
-   &tog NUMPAD &kp DEL &kp END  &kp PG_DN &none  &none     &none    &none    &none  &none     &none   &none
-                           &kp LGUI &kp LCTL &mo NUMROW    &kp SPC &mo ADJUST &tog GAMING
+   &none    &kp F12         &kp F7          &kp F8          &kp F9          &kp PSCRN           &none               &none               &kp PG_UP       &none           &none  &none
+   &none    &hm LCTRL F11   &hm LALT F4     &hm LGUI F5     &hm LSHFT F6    &kp SLCK            &none               &hm RSHFT HOME      &hm RGUI PG_DN  &hm RALT END    &none  &none
+   &none    &none           &kp F1          &kp F2          &kp F3          &kp PAUSE_BREAK     &kp INS             &mt LGUI X          &mt LGUI C      &mt LGUI V      &none  &none
+                                            &lt ESC FUNC    &lt F10 NUMBER  &lt TAB CONFIG      &lt ENTER CONFIG    &lt BSPC NUMBER     &lt DEL FUNC
                         >;
                 };
 
                 config_layer {
-                        label = "CONFIG";
+                    label = "CONFIG";
 
-// RESET: reset keyboard firmware
-// BT_CLR: clear the currently selected bluetooth profile
-// BT0-4: select bluetooth device 0-4
 // -----------------------------------------------------------------------------------------
-// | RESET |   1   |   2   |   3   |   4   |   5   |       |   6   |   7   |   8   |   9   |   0   |  DEL  |
-// | BT_CLR|  BT0  |  BT1  |  BT2  |  BT3  |  BT4  |       |       |       |       |       |       |       |
-// |       |       |       |       |       |       |       |       |       |       |       |       |       |
-//                         | CONFIG|  CTL  | NUMROW|       | SPACE | ADJUST|  F13  |
+// | BT_CLR|  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |       |       |       |       |       |       |       |
+// |  MAC  |  WIN  |   <<  |  >||  |   >>  |       |       |       |       |       |       |       |       |
+// | RESET |       | VOLDN |  MUTE | VOLUP |       |       |       |       |       |       |       |       |
+//                         |  ESC  |  SPC  |  TAB  |       | ENTER |  BSPC |  DEL  |
                         bindings = <
-   &reset     &none        &none        &none        &none        &none           &none &none &none &none &none &none 
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none &none &none &none &none &none
-   &none      &none        &none        &none        &none        &none           &none &none &none &none &none &none
-                                                &mo CONFIG &kp LCTL &mo NUMROW    &kp SPC &mo ADJUST &kp F13
+   &bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &none               &none               &none       &none   &none   &none
+   &none        &none           &kp C_PREV      &kp C_PP        &kp C_NEXT      &none           &none               &none               &none       &none   &none   &none
+   &reset       &none           &kp C_VOL_DN    &kp C_MUTE      &kp C_VOL_UP    &none           &none               &none               &none       &none   &none   &none
+                                                &lt ESC FUNC    &lt F10 NUMBER  &lt TAB CONFIG  &lt ENTER CONFIG    &lt BSPC NUMBER     &lt DEL FUNC
                         >;
                 };
+
         };
 };
