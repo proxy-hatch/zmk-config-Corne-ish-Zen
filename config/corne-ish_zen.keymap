@@ -66,9 +66,9 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
 // |   (   |   )   |   1!  |   2@  |   3#  |   -   |       |       |  CUT  | COPY  | PASTE |       |       |
 //                         |   .   |   0)  |   +   |       | ENTER |  BSPC |  DEL  |
                         bindings = <
-   &kp LBRC     &kp RBRC        &kp N7          &kp N8              &kp N9          &kp KP_SLASH        &none               &mt LGUI Z          &kp UP          &kp KP_N9       &none  &none
+   &kp LBRC     &kp RBRC        &kp N7          &kp N8              &kp N9          &kp KP_SLASH        &none               &kp C_AC_UNDO       &kp UP          &kp C_AC_REDO   &none  &none
    &kp LBKT     &hm LCTRL RBKT  &hm LALT N4     &hm LGUI N5         &hm LSHFT N6    &kp KP_MULTIPLY     &none               &hm RSHFT LEFT      &hm RGUI DOWN   &hm RALT RIGHT  &none  &none
-   &kp LPAR     &kp RPAR        &kp N1          &kp N2              &kp N3          &kp KP_MINUS        &none               &mt LGUI X          &mt LGUI C      &mt LGUI V      &none  &none
+   &kp LPAR     &kp RPAR        &kp N1          &kp N2              &kp N3          &kp KP_MINUS        &none               &kp C_AC_CUT        &kp C_AC_COPY   &kp C_AC_PASTE  &none  &none
                                                 &lt FUNC KP_DOT     &lt NUMBER N0   &lt CONFIG KP_PLUS  &lt CONFIG ENTER    &lt NUMBER BSPC     &lt FUNC DEL
                         >;
                 };
@@ -77,14 +77,14 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
                     label = "FUNC";
 
 // -----------------------------------------------------------------------------------------
-// |       |  F12  |   F7  |   F8  |   F9  | PrtSc |       |       |       |  PGUP |       |       |       |
+// |       |  F12  |   F7  |   F8  |   F9  | PrtSc |       |       |  UNDO |  PGUP |  REDO |       |       |
 // |       |  F11  |   F4  |   F5  |   F6  | ScrLk |       |       |  HOME |  PGDN |  END  |       |       |
 // |       |       |   F1  |   F2  |   F3  | PauBrk|       |  INS  |  CUT  |  COPY | PASTE |       |       |
 //                         |  ESC  |   F10 |  TAB  |       | ENTER |  BSPC |  DEL  |
                         bindings = <
-   &none    &kp F12         &kp F7          &kp F8          &kp F9          &kp PSCRN           &none               &none               &kp PG_UP       &none           &none  &none
+   &none    &kp F12         &kp F7          &kp F8          &kp F9          &kp PSCRN           &none               &kp C_AC_UNDO       &kp PG_UP       &kp C_AC_REDO   &none  &none
    &none    &hm LCTRL F11   &hm LALT F4     &hm LGUI F5     &hm LSHFT F6    &kp SLCK            &none               &hm RSHFT HOME      &hm RGUI PG_DN  &hm RALT END    &none  &none
-   &none    &none           &kp F1          &kp F2          &kp F3          &kp PAUSE_BREAK     &kp INS             &mt LGUI X          &mt LGUI C      &mt LGUI V      &none  &none
+   &none    &none           &kp F1          &kp F2          &kp F3          &kp PAUSE_BREAK     &kp INS             &kp C_AC_CUT        &kp C_AC_COPY   &kp C_AC_PASTE  &none  &none
                                             &lt FUNC ESC    &lt NUMBER F10  &lt CONFIG TAB      &lt CONFIG ENTER    &lt NUMBER BSPC     &lt FUNC DEL
                         >;
                 };
