@@ -30,7 +30,7 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOMEROW_MOD";
                 #binding-cells = <2>;
-                tapping-term-ms = <250>;
+                tapping-term-ms = <150>;
                 quick_tap_ms = <0>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
@@ -53,7 +53,7 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
    &kp GRAVE    &kp Q       &kp W       &kp E           &kp R           &kp T           &kp Y               &kp U               &kp I       &kp O       &kp P           &kp EQUAL
    &kp BSLH     &hm LCTRL A &hm LALT S  &hm LGUI D      &hm LSHFT F     &kp G           &kp H               &hm RSHFT J         &hm RGUI K  &hm RALT L  &hm RCTRL SEMI  &kp SINGLE_QUOTE
    &kp CAPS     &kp Z       &kp X       &kp C           &kp V           &kp B           &kp N               &kp M               &kp COMMA   &kp DOT     &kp SLASH       &kp MINUS
-                                        &lt ESC FUNC    &lt SPC NUMBER  &lt TAB CONFIG  &lt ENTER CONFIG    &lt BSPC NUMBER     &lt DEL FUNC
+                                        &lt FUNC ESC    &lt NUMBER SPC  &lt CONFIG TAB  &lt CONFIG ENTER    &lt NUMBER BSPC     &lt FUNC DEL
                         >;
                 };
 
@@ -69,7 +69,7 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
    &kp LBRC     &kp RBRC        &kp N7          &kp N8              &kp N9          &kp KP_SLASH        &none               &mt LGUI Z          &kp UP          &kp KP_N9       &none  &none
    &kp LBKT     &hm LCTRL RBKT  &hm LALT N4     &hm LGUI N5         &hm LSHFT N6    &kp KP_MULTIPLY     &none               &hm RSHFT LEFT      &hm RGUI DOWN   &hm RALT RIGHT  &none  &none
    &kp LPAR     &kp RPAR        &kp N1          &kp N2              &kp N3          &kp KP_MINUS        &none               &mt LGUI X          &mt LGUI C      &mt LGUI V      &none  &none
-                                                &lt KP_DOT FUNC     &lt N0 NUMBER   &lt KP_PLUS CONFIG  &lt ENTER CONFIG    &lt BSPC NUMBER     &lt DEL FUNC
+                                                &lt FUNC KP_DOT     &lt NUMBER N0   &lt CONFIG KP_PLUS  &lt CONFIG ENTER    &lt NUMBER BSPC     &lt FUNC DEL
                         >;
                 };
 
@@ -85,7 +85,7 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
    &none    &kp F12         &kp F7          &kp F8          &kp F9          &kp PSCRN           &none               &none               &kp PG_UP       &none           &none  &none
    &none    &hm LCTRL F11   &hm LALT F4     &hm LGUI F5     &hm LSHFT F6    &kp SLCK            &none               &hm RSHFT HOME      &hm RGUI PG_DN  &hm RALT END    &none  &none
    &none    &none           &kp F1          &kp F2          &kp F3          &kp PAUSE_BREAK     &kp INS             &mt LGUI X          &mt LGUI C      &mt LGUI V      &none  &none
-                                            &lt ESC FUNC    &lt F10 NUMBER  &lt TAB CONFIG      &lt ENTER CONFIG    &lt BSPC NUMBER     &lt DEL FUNC
+                                            &lt FUNC ESC    &lt NUMBER F10  &lt CONFIG TAB      &lt CONFIG ENTER    &lt NUMBER BSPC     &lt FUNC DEL
                         >;
                 };
 
@@ -101,7 +101,7 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
    &bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &none               &none               &none       &none   &none   &none
    &none        &none           &kp C_PREV      &kp C_PP        &kp C_NEXT      &none           &none               &none               &none       &none   &none   &none
    &reset       &none           &kp C_VOL_DN    &kp C_MUTE      &kp C_VOL_UP    &none           &none               &none               &none       &none   &none   &none
-                                                &lt ESC FUNC    &lt F10 NUMBER  &lt TAB CONFIG  &lt ENTER CONFIG    &lt BSPC NUMBER     &lt DEL FUNC
+                                                &lt FUNC ESC    &lt NUMBER SPC  &lt CONFIG TAB  &lt CONFIG ENTER    &lt NUMBER BSPC     &lt FUNC DEL
                         >;
                 };
 
