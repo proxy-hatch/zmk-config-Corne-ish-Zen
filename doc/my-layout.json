@@ -1,0 +1,302 @@
+[
+  {
+    "name": "corne-ish-zen",
+    "author": "proxy-hatch"
+  },
+  [
+    {
+      "y": 1,
+      "x": 3,
+      "c": "#212224",
+      "t": "#187bde\n#f56d0c\n\n\n#00ff44\n\n#ffffff",
+      "p": "SA",
+      "a": 1
+    },
+    "8*\nF8\n\n\nBt3\n\nE",
+    {
+      "x": 6.5,
+      "t": "#187bde\n#f56d0c\n\n\n#ffffff\n\n#ffffff",
+      "a": 5
+    },
+    "&uarr;\nPgUp\n\n\n\n\nI"
+  ],
+  [
+    {
+      "y": -0.8700000000000001,
+      "x": 4,
+      "t": "#187bde\n#f56d0c\n\n\n#00ff44\n\n#ffffff\n\n\n\n\n#ffffff",
+      "a": 1
+    },
+    "9(\nF9\n\n\nBt4\n\nR",
+    {
+      "x": 4.5,
+      "t": "#187bde\n#f56d0c\n\n\n#ffffff\n\n#ffffff",
+      "a": 5
+    },
+    "Undo\nUndo\n\n\n\n\nU",
+    {
+      "x": 1
+    },
+    "Redo\nRedo\n\n\n\n\nO"
+  ],
+  [
+    {
+      "y": -0.9999559999999998,
+      "x": 2,
+      "t": "#187bde\n#f56d0c\n\n\n#00ff44\n\n#ffffff",
+      "a": 1
+    },
+    "7&\nF7\n\n\nBt2\n\nW"
+  ],
+  [
+    {
+      "y": -0.8800439999999998,
+      "x": 5,
+      "t": "#187bde\n#f56d0c\n\n\n#00ff44\n\n#ffffff\n\n\n\n\n#ffffff"
+    },
+    "/\nPrScr\n\n\nBt5\n\nT",
+    {
+      "x": 2.5,
+      "t": "#ffffff",
+      "a": 7
+    },
+    "Y"
+  ],
+  [
+    {
+      "y": -0.8700000000000001,
+      "t": "#187bde\n#f56d0c\n\n\n#00ff44\n\n#ffffff",
+      "a": 1
+    },
+    "{\n\n\n\nBtClr\n\n`~",
+    "}\nF12\n\n\nBt1\n\nQ",
+    {
+      "x": 10.5,
+      "t": "#ffffff",
+      "a": 7
+    },
+    "P",
+    "=+"
+  ],
+  [
+    {
+      "y": -0.3799999999999999,
+      "x": 3,
+      "t": "#187bde\n#f56d0c\n\n\n#00ff44\n\n#ffffff\n\n\n\n\n#ffffff",
+      "a": 1
+    },
+    "5%\nF5\n\n\n<i class='kb kb-Multimedia-Play-Pause'></i>\n\nD\n\n\n\n\nCmd",
+    {
+      "x": 6.5,
+      "t": "#187bde\n#f56d0c\n\n\n#ffffff\n\n#ffffff",
+      "a": 5
+    },
+    "&Darr;\n\n\n\nCmd\n\nK"
+  ],
+  [
+    {
+      "y": -0.8700000000000001,
+      "x": 2,
+      "t": "#187bde\n#f56d0c\n\n\n#00ff44\n#ffffff\n#ffffff\n\n\n\n\n#ffffff",
+      "a": 1,
+      "f": 4
+    },
+    "4$\nF4\n\n\n<i class='kb kb-Multimedia-Rewind-Start'></i>\n\nS\n\n\n\n\nOpt",
+    {
+      "x": 6.51,
+      "t": "#187bde\n#f56d0c\n\n\n#ffffff\n\n#ffffff",
+      "a": 5,
+      "f": 3,
+      "n": true
+    },
+    "&larr;\n\n\n\nShift\n\nJ",
+    {
+      "x": 0.9900000000000002
+    },
+    "&Rarr;\n\n\n\nOpt\n\nL"
+  ],
+  [
+    {
+      "y": -0.9999560000000001,
+      "x": 4,
+      "t": "#187bde\n#f56d0c\n\n\n #00ff44\n\n#ffffff\n\n\n\n\n#ffffff",
+      "a": 1,
+      "n": true
+    },
+    "6^\nF6\n\n\n<i class='kb kb-Multimedia-Play-Pause'></i>\n\nF\n\n\n\n\nShift"
+  ],
+  [
+    {
+      "y": -0.8800439999999998,
+      "x": 5,
+      "t": "#187bde\n#f56d0c\n\n\n#ffffff\n\n#ffffff",
+      "a": 5
+    },
+    "*\nScrLk\n\n\n\n\nG",
+    {
+      "x": 2.5,
+      "t": "#ffffff",
+      "a": 7
+    },
+    "H"
+  ],
+  [
+    {
+      "y": -0.8700000000000001,
+      "t": "#187bde\n\n\n\n#00ff44\n\n#ffffff",
+      "a": 1
+    },
+    "[{\n\n\n\nMac\n\n\\|",
+    {
+      "t": "#187bde\n#f56d0c\n\n\n#00ff44\n\n#ffffff\n\n\n\n\n#ffffff"
+    },
+    "]}\nF11\n\n\nWin\n\nA\n\n\n\n\nCtr",
+    {
+      "x": 10.5,
+      "t": "#ffffff\n\n\n\n#ffffff",
+      "a": 7
+    },
+    ";:\n\n\n\nCtr",
+    {
+      "t": "#ffffff"
+    },
+    "'  \""
+  ],
+  [
+    {
+      "y": -0.3799999999999999,
+      "x": 3,
+      "t": "#187bde\n#f56d0c\n\n\n #00ff44\n\n#ffffff",
+      "a": 1
+    },
+    "2@\nF2\n\n\n<i class='kb kb-Multimedia-Mute-1'></i>\n\nC",
+    {
+      "x": 6.5,
+      "t": "#187bde\n#f56d0c\n\n\n\n\n#ffffff",
+      "a": 5
+    },
+    "Copy\nCopy\n\n\n\n\n,<"
+  ],
+  [
+    {
+      "y": -0.8700000000000001,
+      "x": 2,
+      "t": "#187bde\n#f56d0c\n\n\n#00ff44\n\n#ffffff",
+      "a": 1
+    },
+    "1!\nF1\n\n\n<i class='kb kb-Multimedia-Volume-Down-1'></i>\n\nX",
+    {
+      "x": 6.5,
+      "t": "#187bde\n#f56d0c\n\n\n\n\n#ffffff",
+      "a": 5
+    },
+    "Cut\nCut\n\n\n\n\nM",
+    {
+      "x": 1
+    },
+    "Paste\nPaste\n\n\n\n\n.>"
+  ],
+  [
+    {
+      "y": -0.9999560000000001,
+      "x": 4,
+      "t": "#187bde\n#f56d0c\n\n\n#00ff44\n\n#ffffff",
+      "a": 1
+    },
+    "3#\nF3\n\n\n<i class='kb kb-Multimedia-Volume-Up-1'></i>\n\nV"
+  ],
+  [
+    {
+      "y": -0.8800439999999998,
+      "x": 5,
+      "t": "#187bde\n#f56d0c\n\n\n#ffffff\n\n#ffffff",
+      "a": 5
+    },
+    "-\nPsBrk\n\n\n\n\nB",
+    {
+      "x": 2.5,
+      "t": "#187bde\n#f56d0c\n\n\n\n\n#ffffff"
+    },
+    "\nIns\n\n\n\n\nN"
+  ],
+  [
+    {
+      "y": -0.8700000000000001,
+      "t": "#187bde\n\n\n\n#00ff44\n\n#ffffff",
+      "a": 1
+    },
+    "(\n\n\n\nReset\n\nCaps",
+    {
+      "t": "#187bde\n#f56d0c\n\n\n\n\n#ffffff",
+      "a": 5
+    },
+    ")\n\n\n\n\n\nZ",
+    {
+      "x": 10.5,
+      "t": "#ffffff",
+      "a": 7
+    },
+    "/ ?",
+    "-_"
+  ],
+  [
+    {
+      "rx": 13,
+      "ry": 4.25,
+      "x": -9.62,
+      "t": "#ffffff\n\n\n\n#f56d0c"
+    },
+    "Esc\n\n\n\nFunc",
+    {
+      "x": 5.869999999999999
+    },
+    "Del\n\n\n\nFunc"
+  ],
+  [
+    {
+      "r": 15,
+      "rx": 4,
+      "ry": 3.875,
+      "y": 0.2549999999999999,
+      "x": 0.75,
+      "t": "#187bde\n#f56d0c",
+      "a": 5
+    },
+    "0\nF10\n\n\nNumber"
+  ],
+  [
+    {
+      "r": 30,
+      "rx": 5,
+      "ry": 4.5,
+      "y": -0.75,
+      "x": 0.8799999999999999,
+      "t": "#ffffff\n\n\n\n#00ff44",
+      "a": 7,
+      "h": 1.5
+    },
+    "Tab\n\n\n\nConfig"
+  ],
+  [
+    {
+      "r": -30,
+      "rx": 6.25,
+      "ry": 9.5,
+      "y": -3.37,
+      "x": 3.5,
+      "h": 1.5
+    },
+    "Enter\n\n\n\nConfig"
+  ],
+  [
+    {
+      "r": -15,
+      "rx": 10.875,
+      "ry": 12,
+      "y": -7.62,
+      "x": 0.125,
+      "t": "#ffffff\n\n\n\n#187bde"
+    },
+    "<------\n\n\n\nNumber"
+  ]
+]

@@ -26,15 +26,52 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
 
 / {
         behaviors {
-            hm: homerow_mods {
+            hm_ctr: homerow_mods {
                 compatible = "zmk,behavior-hold-tap";
-                label = "HOMEROW_MOD";
+                label = "HOMEROW_MOD_CTRL";
+                #binding-cells = <2>;
+                tapping-term-ms = <180>;
+                quick_tap_ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            };
+            hm_alt: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MOD_ALT";
+                #binding-cells = <2>;
+                tapping-term-ms = <200>;
+                quick_tap_ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            };
+            hm_cmd: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MOD_CMD";
                 #binding-cells = <2>;
                 tapping-term-ms = <150>;
                 quick_tap_ms = <0>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
+            hm_sft: homerow_mods {
+                            compatible = "zmk,behavior-hold-tap";
+                            label = "HOMEROW_MOD_SHIFT";
+                            #binding-cells = <2>;
+                            tapping-term-ms = <100>;
+                            quick_tap_ms = <0>;
+                            flavor = "tap-preferred";
+                            bindings = <&kp>, <&kp>;
+                        };
+            // layer tap with home row mod characteristics
+            lt_hm: homerow_mods {
+                            compatible = "zmk,behavior-hold-tap";
+                            label = "LAYER_TAP_HOMEROW_MOD";
+                            #binding-cells = <2>;
+                            tapping-term-ms = <100>;
+                            quick_tap_ms = <0>;
+                            flavor = "tap-preferred";
+                            bindings = <&kp>, <&mo>;
+                        };
         };
 
         keymap {
@@ -50,10 +87,10 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
 // | CAPS |   Z   |   X   |   C   |   V   |   B   |       |   N   |   M   |   ,<  |   .>  |   /?  |   -_  |
 //                        |  ESC  |  SPC  |  TAB  |       | ENTER |  BSPC |  DEL  |
                         bindings = <
-   &kp GRAVE    &kp Q       &kp W       &kp E           &kp R           &kp T           &kp Y               &kp U               &kp I       &kp O       &kp P           &kp EQUAL
-   &kp BSLH     &hm LCTRL A &hm LALT S  &hm LGUI D      &hm LSHFT F     &kp G           &kp H               &hm RSHFT J         &hm RGUI K  &hm RALT L  &hm RCTRL SEMI  &kp SINGLE_QUOTE
-   &kp CAPS     &kp Z       &kp X       &kp C           &kp V           &kp B           &kp N               &kp M               &kp COMMA   &kp DOT     &kp SLASH       &kp MINUS
-                                        &lt FUNC ESC    &lt NUMBER SPC  &lt CONFIG TAB  &lt CONFIG ENTER    &lt NUMBER BSPC     &lt FUNC DEL
+   &kp GRAVE    &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y               &kp U               &kp I           &kp O           &kp P               &kp EQUAL
+   &kp BSLH     &hm_ctr LCTRL A &hm_alt LALT S  &hm_cmd LGUI D  &hm_sft LSHFT F &kp G           &kp H               &hm_sft RSHFT J     &hm_cmd RGUI K  &hm_alt RALT L  &hm_ctr RCTRL SEMI  &kp SINGLE_QUOTE
+   &kp CAPS     &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N               &kp M               &kp COMMA       &kp DOT         &kp SLASH           &kp MINUS
+                                        &lt_hm FUNC ESC    &lt_hm NUMBER SPC  &lt_hm CONFIG TAB  &lt_hm CONFIG ENTER    &lt_hm NUMBER BSPC     &lt_hm FUNC DEL
                         >;
                 };
 
@@ -66,10 +103,10 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
 // |   (   |   )   |   1!  |   2@  |   3#  |   -   |       |       |  CUT  | COPY  | PASTE |       |       |
 //                         |   .   |   0)  |   +   |       | ENTER |  BSPC |  DEL  |
                         bindings = <
-   &kp LBRC     &kp RBRC        &kp N7          &kp N8              &kp N9          &kp KP_SLASH        &none               &kp C_AC_UNDO       &kp UP          &kp C_AC_REDO   &none  &none
-   &kp LBKT     &hm LCTRL RBKT  &hm LALT N4     &hm LGUI N5         &hm LSHFT N6    &kp KP_MULTIPLY     &none               &hm RSHFT LEFT      &hm RGUI DOWN   &hm RALT RIGHT  &none  &none
-   &kp LPAR     &kp RPAR        &kp N1          &kp N2              &kp N3          &kp KP_MINUS        &none               &kp C_AC_CUT        &kp C_AC_COPY   &kp C_AC_PASTE  &none  &none
-                                                &lt FUNC KP_DOT     &lt NUMBER N0   &lt CONFIG KP_PLUS  &lt CONFIG ENTER    &lt NUMBER BSPC     &lt FUNC DEL
+   &kp LBRC     &kp RBRC        &kp N7          &kp N8              &kp N9              &kp KP_SLASH            &none               &kp C_AC_UNDO       &kp UP              &kp C_AC_REDO       &none       &none
+   &kp LBKT     &hm LCTRL RBKT  &hm_alt LALT N4 &hm_cmd LGUI N5     &hm_sft LSHFT N6    &kp KP_MULTIPLY         &none               &hm_sft RSHFT LEFT  &hm_cmd RGUI DOWN   &hm_alt RALT RIGHT  &kp RCTRL   &none
+   &kp LPAR     &kp RPAR        &kp N1          &kp N2              &kp N3              &kp KP_MINUS            &none               &kp C_AC_CUT        &kp C_AC_COPY       &kp C_AC_PASTE      &none       &none
+                                                &lt_hm FUNC KP_DOT  &lt_hm NUMBER N0    &lt_hm CONFIG KP_PLUS   &lt_hm CONFIG ENTER &lt_hm NUMBER BSPC  &lt_hm FUNC DEL
                         >;
                 };
 
@@ -82,10 +119,10 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
 // |       |       |   F1  |   F2  |   F3  | PauBrk|       |  INS  |  CUT  |  COPY | PASTE |       |       |
 //                         |  ESC  |   F10 |  TAB  |       | ENTER |  BSPC |  DEL  |
                         bindings = <
-   &none    &kp F12         &kp F7          &kp F8          &kp F9          &kp PSCRN           &none               &kp C_AC_UNDO       &kp PG_UP       &kp C_AC_REDO   &none  &none
-   &none    &hm LCTRL F11   &hm LALT F4     &hm LGUI F5     &hm LSHFT F6    &kp SLCK            &none               &hm RSHFT HOME      &hm RGUI PG_DN  &hm RALT END    &none  &none
-   &none    &none           &kp F1          &kp F2          &kp F3          &kp PAUSE_BREAK     &kp INS             &kp C_AC_CUT        &kp C_AC_COPY   &kp C_AC_PASTE  &none  &none
-                                            &lt FUNC ESC    &lt NUMBER F10  &lt CONFIG TAB      &lt CONFIG ENTER    &lt NUMBER BSPC     &lt FUNC DEL
+   &none    &kp F12             &kp F7          &kp F8          &kp F9              &kp PSCRN           &none               &kp C_AC_UNDO       &kp PG_UP           &kp C_AC_REDO       &none       &none
+   &none    &hm_ctr LCTRL F11   &hm_alt LALT F4 &hm_cmd LGUI F5 &hm LSHFT F6        &kp SLCK            &none               &hm RSHFT HOME      &hm_cmd RGUI PG_DN  &hm_alt RALT END    &kp RCTRL   &none
+   &none    &none               &kp F1          &kp F2          &kp F3              &kp PAUSE_BREAK     &kp INS             &kp C_AC_CUT        &kp C_AC_COPY       &kp C_AC_PASTE      &none       &none
+                                                &lt_hm FUNC ESC &lt_hm NUMBER F10   &lt_hm CONFIG TAB   &lt_hm CONFIG ENTER &lt_hm NUMBER BSPC  &lt_hm FUNC DEL
                         >;
                 };
 
@@ -100,8 +137,8 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
                         bindings = <
    &bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &none               &none               &none       &none   &none   &none
    &none        &none           &kp C_PREV      &kp C_PP        &kp C_NEXT      &none           &none               &none               &none       &none   &none   &none
-   &reset       &none           &kp C_VOL_DN    &kp C_MUTE      &kp C_VOL_UP    &none           &none               &none               &none       &none   &none   &none
-                                                &lt FUNC ESC    &lt NUMBER SPC  &lt CONFIG TAB  &lt CONFIG ENTER    &lt NUMBER BSPC     &lt FUNC DEL
+   &none        &none           &kp C_VOL_DN    &kp C_MUTE      &kp C_VOL_UP    &none           &none               &none               &none       &none   &none   &none
+                                                &lt_hm FUNC ESC    &lt_hm NUMBER SPC  &lt_hm CONFIG TAB  &lt_hm CONFIG ENTER    &lt_hm NUMBER BSPC     &lt_hm FUNC DEL
                         >;
                 };
 
