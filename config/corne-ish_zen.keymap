@@ -120,7 +120,7 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
 //                         |  ESC  |   F10 |  TAB  |       | ENTER |  BSPC |  DEL  |
                         bindings = <
    &none    &kp F12             &kp F7          &kp F8          &kp F9              &kp PSCRN           &none               &kp C_AC_UNDO       &kp PG_UP           &kp C_AC_REDO       &none       &none
-   &none    &hm_ctr LCTRL F11   &hm_alt LALT F4 &hm_cmd LGUI F5 &hm LSHFT F6        &kp SLCK            &none               &hm RSHFT HOME      &hm_cmd RGUI PG_DN  &hm_alt RALT END    &kp RCTRL   &none
+   &none    &hm_ctr LCTRL F11   &hm_alt LALT F4 &hm_cmd LGUI F5 &hm_sft LSHFT F6    &kp SLCK            &none               &hm_sft RSHFT HOME  &hm_cmd RGUI PG_DN  &hm_alt RALT END    &kp RCTRL   &none
    &none    &none               &kp F1          &kp F2          &kp F3              &kp PAUSE_BREAK     &kp INS             &kp C_AC_CUT        &kp C_AC_COPY       &kp C_AC_PASTE      &none       &none
                                                 &lt_hm FUNC ESC &lt_hm NUMBER F10   &lt_hm CONFIG TAB   &lt_hm CONFIG ENTER &lt_hm NUMBER BSPC  &lt_hm FUNC DEL
                         >;
