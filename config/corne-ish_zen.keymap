@@ -26,7 +26,7 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
 
 / {
         behaviors {
-            hm_ctr: homerow_mods {
+            hm_ctr: homerow_mod_ctr {
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOMEROW_MOD_CTRL";
                 #binding-cells = <2>;
@@ -35,7 +35,7 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
-            hm_alt: homerow_mods {
+            hm_alt: homerow_mod_alt {
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOMEROW_MOD_ALT";
                 #binding-cells = <2>;
@@ -44,7 +44,7 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
-            hm_cmd: homerow_mods {
+            hm_cmd: homerow_mod_cmd {
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOMEROW_MOD_CMD";
                 #binding-cells = <2>;
@@ -53,7 +53,7 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
-            hm_sft: homerow_mods {
+            hm_sft: homerow_mod_sft {
                             compatible = "zmk,behavior-hold-tap";
                             label = "HOMEROW_MOD_SHIFT";
                             #binding-cells = <2>;
@@ -67,10 +67,10 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
                             compatible = "zmk,behavior-hold-tap";
                             label = "LAYER_TAP_HOMEROW_MOD";
                             #binding-cells = <2>;
-                            tapping-term-ms = <100>;
+                            tapping-term-ms = <150>;
                             quick_tap_ms = <0>;
                             flavor = "tap-preferred";
-                            bindings = <&kp>, <&mo>;
+                            bindings = <&mo>, <&kp>;
                         };
         };
 
