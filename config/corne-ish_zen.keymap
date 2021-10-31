@@ -103,9 +103,9 @@ WIN ALT CTRL SHIFT      SHIFT CTRL ALT WIN
 // |   (   |   )   |   1!  |   2@  |   3#  |   -   |       |       |  CUT  | COPY  | PASTE |       |       |
 //                         |   .   |   0)  |   +   |       | ENTER |  BSPC |  DEL  |
                         bindings = <
-   &kp LBRC     &kp RBRC        &kp N7          &kp N8              &kp N9              &kp KP_SLASH            &none               &kp C_AC_UNDO       &kp UP              &kp C_AC_REDO       &none       &none
-   &kp LBKT     &hm LCTRL RBKT  &hm_alt LALT N4 &hm_cmd LGUI N5     &hm_sft LSHFT N6    &kp KP_MULTIPLY         &none               &hm_sft RSHFT LEFT  &hm_cmd RGUI DOWN   &hm_alt RALT RIGHT  &kp RCTRL   &none
-   &kp LPAR     &kp RPAR        &kp N1          &kp N2              &kp N3              &kp KP_MINUS            &none               &kp C_AC_CUT        &kp C_AC_COPY       &kp C_AC_PASTE      &none       &none
+   &kp LBRC     &kp RBRC            &kp N7          &kp N8              &kp N9              &kp KP_SLASH            &none               &kp C_AC_UNDO       &kp UP              &kp C_AC_REDO       &none       &none
+   &kp LBKT     &hm_ctr LCTRL RBKT  &hm_alt LALT N4 &hm_cmd LGUI N5     &hm_sft LSHFT N6    &kp KP_MULTIPLY         &none               &hm_sft RSHFT LEFT  &hm_cmd RGUI DOWN   &hm_alt RALT RIGHT  &kp RCTRL   &none
+   &kp LPAR     &kp RPAR            &kp N1          &kp N2              &kp N3              &kp KP_MINUS            &none               &kp C_AC_CUT        &kp C_AC_COPY       &kp C_AC_PASTE      &none       &none
                                                 &lt_hm FUNC KP_DOT  &lt_hm NUMBER N0    &lt_hm CONFIG KP_PLUS   &lt_hm CONFIG ENTER &lt_hm NUMBER BSPC  &lt_hm FUNC DEL
                         >;
                 };
